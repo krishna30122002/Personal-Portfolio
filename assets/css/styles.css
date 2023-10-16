@@ -7,9 +7,9 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #fef0f0;
+  --bg-color: #FFFFD2;
   --primary-color: #04364A;
-  --secondary-color: #ff7235;
+  --secondary-color: #234E70;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
@@ -44,6 +44,7 @@ a:hover {
 }
 
 body {
+  /* background-color: #317773; */
   font-family: var(--font-family);
 }
 
@@ -297,3 +298,111 @@ footer {
   text-align: center;
   margin: 2rem 0 0;
 }
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 5%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (max-width: 720px) {
+
+  nav{
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -7rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+  .bio {
+    margin-top: 2rem;
+    width: 20.5rem;
+  }
+
+  .more-about {
+    margin-top: 3rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 23.75rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+} 
